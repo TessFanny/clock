@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container{
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+  box-shadow: 10px 10px 15px rgba(211, 207, 207, 0.1),
+  -10px -10px 15px rgba(8, 6, 6, 0.1),
+  inset -10px -10px 15px rgba(10, 9, 9, 0.2),
+  inset 10px 10px 15px rgba(236, 234, 234, 0.2);
+  border-radius: 10px;
+  position: relative;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.numero{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  
+  text-align: center;
+  transform: rotate(0);
+}
+.numero-un{transform: rotate(30deg);}
+.numero-deux{transform: rotate(60deg);}
+.numero-trois{transform: rotate(90deg);}
+.numero-quatre{transform: rotate(120deg);}
+.numero-cinq{transform: rotate(150deg);}
+.numero-six{transform: rotate(180deg);}
+.numero-sept{transform: rotate(210deg);}
+.numero-huit{transform: rotate(240deg);}
+.numero-neuf{transform: rotate(270deg);}
+.numero-dix{transform: rotate(300deg);}
+.numero-onze{transform: rotate(330deg);}
+.numero-douze{transform: rotate(3600deg);}
+
+.aiguille{
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  height: 40%;
+  width: 8px;
+  background-color: black;
+  transform: translate(-50%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+}
+.aiguille-secondes{
+  background-color: red;
+  transform: rotate(270deg);
+  transform-origin: bottom;
+  width: 3px;
+}
+.aiguille-minutes{
+  background-color: black;
+  transform: rotate(15deg);
+  transform-origin: bottom;
+  width: 5px;
+
+}
+.aiguille-heures{
+  background-color: black;
+  transform: rotate(0deg);
+  transform-origin: bottom;
+  width: 5px;
+  height: 30%;
+  
+}
+
+.container::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
